@@ -12,7 +12,7 @@ write_files:
           containers:
           - env:
             - name: "TFE_OPERATIONAL_MODE"
-              value: "disk"
+              value: "external"
             - name: "TFE_LICENSE"
               value: "${license_value}"
             - name: "TFE_HOSTNAME"
