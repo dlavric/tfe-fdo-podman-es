@@ -81,8 +81,6 @@ write_files:
               name: "run"
             - mountPath: "/tmp"
               name: "tmp"
-            - mountPath: "/var/lib/terraform-enterprise"
-              name: "data"
             - mountPath: "/run/docker.sock"
               name: "docker-sock"
             - mountPath: "/var/cache/tfe-task-worker/terraform"
@@ -101,10 +99,6 @@ write_files:
           - emptyDir:
               medium: "Memory"
             name: "tmp"
-          - hostPath:
-              path: "/opt/tfe-fdo/data"
-              type: "Directory"
-            name: "data"
           - hostPath:
               path: "/var/run/docker.sock"
               type: "File"
